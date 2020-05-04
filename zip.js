@@ -1,4 +1,4 @@
-var cadenaEjemplo = "aaaaabbbcc";
+var cadenaEjemplo = "aaaaabbcbaccb";
 
 console.log("Entrada: " + cadenaEjemplo)
 
@@ -44,13 +44,17 @@ for(var i=keyValues.length-1; i>=0; i--){
     keyValues[i].push(codif)
 }
 
+var codificador = {}
+for (var i=0; i<keyValues.length; i++){
+    codificador[keyValues[i][0]] = keyValues[i][2]
+}
+
+console.log(codificador)
 console.log(keyValues);
 var salidaConcat = "";
 
-for(var i=0; i<keyValues.length; i++){
-    for(var j=0; j<keyValues[i][1]; j++){
-        salidaConcat += keyValues[i][2]
-    }
+for(var i=0; i<cadenaEjemplo.length; i++){
+    salidaConcat += codificador[cadenaEjemplo[i]]
 }
 
-console.log("Salida Codificada: "+salidaConcat);
+console.log("Salida Codificada: "+salidaConcat)
