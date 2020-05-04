@@ -1,5 +1,7 @@
 var cadenaEjemplo = "aaaaabbbcc";
 
+console.log("Entrada: " + cadenaEjemplo)
+
 function RepeatedChar(cadena, caracter){
     var count=0;
     for(var i=0; i<cadena.length;i++){
@@ -43,10 +45,8 @@ for(var i=keyValues.length-1; i>=0; i--){
 }
 
 console.log(keyValues);
-var salidaCodificada= "";
-var firstBit= "1";
 var salidaConcat = "";
-//armado de la salida
+
 for(var i=0; i<keyValues.length; i++){
     for(var j=0; j<keyValues[i][1]; j++){
         salidaConcat += keyValues[i][2]
